@@ -43,7 +43,7 @@ public class KafkaConsumerService {
             throw new IllegalArgumentException("Age exceeds the allowed limit");
         }
 //        repository.save(event);
-        // Enrich event
+//         Enrich event
         event.setCreatedAt(LocalDateTime.now());
         event.setKafkaPartition(record.partition());
         event.setKafkaOffset(record.offset());
@@ -53,7 +53,5 @@ public class KafkaConsumerService {
         logger.info("Persisted enriched UserEvent to DB");
         metrics.increment();
     }
-
-
 }
 

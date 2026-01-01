@@ -22,7 +22,7 @@ public class UserEventService {
         logger.info("💾 users in db now: " + repository.findAll());
     }
 
-    //    public List<UserDTO> getAllEvents() {
+//        public List<UserDTO> getAllEvents() {
 //        return repository.findAll()
 //                .stream()
 //                .map(this::mapToDTO)

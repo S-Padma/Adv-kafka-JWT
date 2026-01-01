@@ -26,7 +26,6 @@ public class AuthController {
 //        Authentication auth = authManager.authenticate(
 //                new UsernamePasswordAuthenticationToken(username, password)
 //        );
-//
 //        return jwtUtil.generateToken(auth.getName()); // `auth.getName()` = username
 //    }
     @PostMapping("/login")
