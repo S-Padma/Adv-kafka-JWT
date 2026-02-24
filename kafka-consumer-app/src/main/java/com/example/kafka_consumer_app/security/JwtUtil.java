@@ -39,6 +39,26 @@ public class JwtUtil {
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
+//    public String generateToken(Authentication authentication) {
+//
+//    CustomUserDetails user = (CustomUserDetails) authentication.getPrincipal();
+//
+//    Map<String, Object> claims = new HashMap<>();
+//    claims.put("id", user.getId());
+//    claims.put("email", user.getUsername());
+//    claims.put("roles", user.getAuthorities()
+//            .stream()
+//            .map(GrantedAuthority::getAuthority)
+//            .toList());
+//
+//    return Jwts.builder()
+//            .setClaims(claims)
+//            .setSubject(user.getUsername())
+//            .setIssuedAt(new Date())
+//            .setExpiration(new Date(System.currentTimeMillis() + expirationMs))
+//            .signWith(key, SignatureAlgorithm.HS256)
+//            .compact();
+//}
 
     public String extractUsername(String token) {
         return Jwts.parserBuilder()
